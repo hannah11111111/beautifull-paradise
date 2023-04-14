@@ -1,0 +1,424 @@
+html {
+	scroll-behavior: smooth !important;
+}
+
+body {
+	background-color: rgb(195, 228, 205);
+	overflow-x: hidden;
+	position: relative;
+}
+
+* {
+	/* aw xatae sarawa pr badan shwenakae betn boshae nabe law law law lae*/
+	margin: 0px;
+	padding: 0px;
+}
+
+.MainImageSeaction {
+	width: 100%;
+	text-align: center;
+}
+
+.top-arrow {
+	position: fixed;
+	right: 30px;
+	bottom: 40px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #52BE80;
+	opacity: 0;
+}
+
+.top-arrow a {
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+
+#mainimage {
+	object-fit: cover;
+
+}
+
+div.top_main {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(65, 138, 59);
+}
+
+table.topt {
+	width: 80%;
+	height: inherit;
+	/*wak merat la hight akae sarawa wardagre wyak hieghteyan haya */
+	border-style: none;
+	margin: auto;
+	/* nwsenakane naw tablaka daxata nawarastawa?*/
+	color: orange;
+}
+
+i {
+	color: goldenrod;
+	width: 35px;
+	height: 35px;
+	padding-top: 10px;
+}
+
+th#social i:hover {
+	/*hover :-hata ka mousakaman ragrt lasare awa bshtakae spe be */
+	border-radius: 5px;
+	background-color: white;
+	color: coral;
+	cursor: pointer;
+	/* gorene neshanae mousaka*/
+}
+
+table.topt tr th span:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+/* end of top main css*/
+
+div.topimg {
+	width: 100%;
+	height: 220%;
+	background-color: rgb(65, 138, 59));
+	background-size: cover;
+	/* wenaka full screen be*/
+	background-attachment: local;
+}
+
+/*end of topimg*/
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: rgb(65, 138, 59);
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+
+}
+
+nav ul {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+nav ul li {
+	list-style: none;
+	/*hech styaleke bo dananet*/
+	float: left;
+	/*hamwyan daxata pal yakawa */
+	position: relative;
+	/*ka drop down e bo drwst dakaen rega bawa bda listakae la zher xoyawa bo drwst be */
+	margin: 2px;
+	z-index: 10;
+}
+
+nav ul li a {
+	text-decoration: none;
+	/*bo awae aw xatae linkakae la zhere namene*/
+	width: 100%;
+	display: block;
+	/*wata text w linkaka bbeta yak parcha wata click la taneshtakashe dabnenyen har maousaka eshbkat */
+	float: left;
+	/*bo awae btwanen shtek la taneshte habe*/
+	font-family: sans-serif;
+	font-weight: 700;
+	border-style: none;
+	color: black;
+	padding: 18px 14px;
+}
+
+ul li a:hover {
+	/*aw coda lo awaya kate click dakaen lasar navakan dakaen la dwae 1 chrka bshte nwsenaka rash be w nwsenakash golde be  */
+	background-color: #221;
+	color: gold;
+	transition: all ease 1s;
+}
+
+/*end navegation css*/
+
+/*start dropdown css*/
+nav ul li ul {
+	display: none;
+	/* wata yak parcha darkawe lazher typakawa agar block be balam madam none man krdwa darnakwe ta xoman namawe */
+	position: absolute;
+	/*wata rastawxo dwae dwae type of floweraka darkawe */
+	background-color: rgb(66, 212, 53);
+	margin-top: 55px;
+	/*wata kamek la sarawa dwrkawetawa wata la typaka dwrkawetawa */
+	opacity: 0.8;
+	/*range listaka kamek kal dabetawa */
+	padding: 0px;
+}
+
+nav ul li ul li {
+	width: 100%;
+	color: black;
+}
+
+nav ul li ul li a {
+	/*awayan winter w summeraka chak daka*/
+	display: block;
+	width: 100%;
+	padding: 12px 0px;
+	/*12 aka wata saraw w xwarawae 12px & 0 akash lae chap w lae rasteshe opx bet*/
+}
+
+nav ul li:hover ul {
+	/*wata har kate mousakaman xsta sar type of floweraka awa listakaman peshan bdatawa ka lasarawa shardbwmanawa ba display none */
+	display: block;
+}
+
+/*end of nav dropdown by nav*/
+
+.main_content {
+	width: 100%;
+	min-height: 500px;
+	background-color: snow;
+	margin-top: 0px;
+}
+
+.myslider {
+	width: 100%;
+	height: 500px;
+	background-color: white;
+
+}
+
+/**/
+html,
+body,
+main {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#carousel {
+	position: relative;
+	height: 400px;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+}
+
+#carousel div {
+	position: absolute;
+	transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+	opacity: 1;
+}
+
+#carousel div img {
+	width: 400px;
+	transition: width 1s;
+}
+
+#carousel div.hideLeft {
+	left: 0%;
+	opacity: 0;
+	transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideLeft img {
+	width: 200px;
+}
+
+#carousel div.hideRight {
+	left: 100%;
+	opacity: 0;
+	transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideRight img {
+	width: 200px;
+}
+
+#carousel div.prev {
+	z-index: 5;
+	left: 30%;
+	transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.prev img {
+	width: 300px;
+}
+
+#carousel div.prevLeftSecond {
+	z-index: 4;
+	left: 15%;
+	transform: translateY(50%) translateX(-50%);
+	opacity: .7;
+}
+
+#carousel div.prevLeftSecond img {
+	width: 200px;
+}
+
+#carousel div.selected {
+	z-index: 10;
+	left: 50%;
+	transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+	z-index: 5;
+	left: 70%;
+	transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+	width: 300px;
+}
+
+#carousel div.nextRightSecond {
+	z-index: 4;
+	left: 85%;
+	transform: translateY(50%) translateX(-50%);
+	opacity: .7;
+}
+
+#carousel div.nextRightSecond img {
+	width: 200px;
+}
+
+.buttons {
+	position: absolute;
+	left: 45%;
+	top: 125%;
+	background-color: rgb(104, 158, 78);
+	text-align: center;
+	width: 10%;
+	z-index: 10;
+	/*bo awae rsmakan nakaweta sar navegaitionakan*/
+}
+
+/**/
+/* start of our team*/
+
+.ourteam {
+	width: 100%;
+	height: 220px;
+	clear: both;
+}
+
+.ourteam h1 {
+	color: forestgreen;
+	font-family: fantasy;
+	opacity: 0.3;
+}
+
+.ourteam .member {
+
+	width: 25%;
+	text-align: center;
+	float: left;
+
+}
+
+.ourteam .member .memimg {
+	width: 100%;
+	height: 100%;
+}
+
+.ourteam .member .memimg img {
+	width: 170px;
+	height: 100%;
+	border-radius: 200px;
+}
+
+.ourteam .member .memname,
+.mempos,
+.mememail {
+	color: #842;
+	font-family: Arial;
+	font-size: 0.7em;
+	font-weight: 700;
+	text-align: justify;
+	padding: 0%;
+}
+
+/*end of our team*/
+footer {
+	width: 100%;
+	height: 250px;
+	background-color: rgb(37, 37, 37);
+	clear: both;
+
+}
+
+footer .col25 {
+	width: 25%;
+	height: 150px;
+	background-color: rgb(40, 40, 40);
+	float: left;
+}
+
+footer .col25 h3 {
+	border-bottom: solid 2px #872;
+	margin: 3% 9%;
+	padding: 0px;
+
+}
+
+footer .col25 {
+	color: white;
+}
+
+footer .clo25 p {
+	margin: o 9%;
+	font-family: monospace;
+	color: gold;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+footer .clo25 ul {
+	margin: 0px 15%;
+}
+
+footer,
+.clo25 ul li {
+	list-style: none;
+	color: white;
+	font-size: 1.2em;
+	font-family: Herculanum;
+	padding: 0px 10px;
+}
+
+footer .col25 ul li ul li {
+	font-size: 0.7em;
+}
+
+footer.col25 h4 {
+	padding: 10px 10px;
+	font-family: cursive;
+	color: #E84;
+	margin: 0px 9%;
+	border: solid 1px #f63;
+	box-shadow: 5px 8px 20px #f63;
+	line-height: 35px;
+
+}
+
+
+.rating-box .stars {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+.stars i {
+	font-size: 35px;
+	color: #b5b8b1;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.stars i.active {
+	color: #ffb851;
+	transform: scale(1.2);
+}
